@@ -30,18 +30,27 @@ const cartoons = [
     // console.log(cartoons.at(0).name)
   
 
+// for (let i = 0; i < cartoons.length - 1; i++) {
+//     for (let j = i + 1; j < cartoons.length; j++) {
+//         if (cartoons[j].debut < cartoons[i].debut) {
+//             let temp = cartoons[i];
+//             cartoons[i] = cartoons[j];
+//             cartoons[j] = temp;
+//         }
+//     }
+// }
+
 for (let i = 0; i < cartoons.length - 1; i++) {
-    for (let j = i + 1; j < cartoons.length; j++) {
+    for (let j = cartoons.length - 1; j > 0; j--) {
         if (cartoons[j].debut < cartoons[i].debut) {
-            let temp = cartoons[i];
-            cartoons[i] = cartoons[j];
-            cartoons[j] = temp;
+            temporal = cartoons.at(j).name
+            console.log(j,i)
+            console.log(temporal);
         }
     }
 }       
-
+// console.log(temporal);
 let peiculaAntigua = cartoons.at(0).name
 
 // console.log(cartoons);
-
-console.log(peiculaAntigua);
+// console.log(peiculaAntigua);
