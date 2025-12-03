@@ -16,41 +16,37 @@ const cartoons = [
 ];
 
 
-//se ordena con el metodo sort y evalua cada propoedas
+// *Se ordena con el metodo sort. Donde se compara cada propiedad y la ordena
     // cartoons.sort(function (a, b) {
     //   if (a.debut > b.debut) {
-    //     return 1;
+    //     return 1; //* cartoons(index=a) muevete hacia la derecha
     //   }
     //   if (a.debut < b.debut) {
-    //     return -1;
+    //     return -1; //* cartoons(index=a) muevete hacia la izquierda
     //   }
-    //   return 0;
+    //   return 0; //* cartoons(index=a) quedate donde estas
     // });
 
     // console.log(cartoons.at(0).name)
   
+//* Usando el metedo de ordenamiento de burbuja
+    // for (let i = 0; i < cartoons.length - 1; i++) {
+    //     for (let j = i + 1; j < cartoons.length; j++) {
+    //         if (cartoons[j].debut < cartoons[i].debut) {
+    //             let temp = cartoons[i];
+    //             cartoons[i] = cartoons[j];
+    //             cartoons[j] = temp;
+    //         }
+    //     }
+    // }
+    // console.log(cartoons.at(0).name)
 
-// for (let i = 0; i < cartoons.length - 1; i++) {
-//     for (let j = i + 1; j < cartoons.length; j++) {
-//         if (cartoons[j].debut < cartoons[i].debut) {
-//             let temp = cartoons[i];
-//             cartoons[i] = cartoons[j];
-//             cartoons[j] = temp;
-//         }
-//     }
-// }
-
-for (let i = 0; i < cartoons.length - 1; i++) {
-    for (let j = cartoons.length - 1; j > 0; j--) {
-        if (cartoons[j].debut < cartoons[i].debut) {
-            temporal = cartoons.at(j).name
-            console.log(j,i)
-            console.log(temporal);
-        }
+//* Usando un bucle for solamente
+    let peliVieja = cartoons.at(0); //* Se inicializa ponendo el primer objeto del array padre 
+    for (const cartoon of cartoons) { 
+        if(cartoon.debut < peliVieja.debut){
+            peliVieja = cartoon;
+        }    
     }
-}       
-// console.log(temporal);
-let peiculaAntigua = cartoons.at(0).name
-
-// console.log(cartoons);
-// console.log(peiculaAntigua);
+    //imprimimos en pantala
+    console.log(`La peli mas vieja del array es ${peliVieja.name}`);
