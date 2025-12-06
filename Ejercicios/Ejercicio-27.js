@@ -42,7 +42,7 @@ const cartoons = [
     // console.log(cartoons.at(0).name)
 
 //* Usando un bucle for solamente
-    let peliVieja = cartoons.at(0); //* Se inicializa ponendo el primer objeto del array padre 
+    let peliVieja = cartoons.at(0); //* Se inicializa ponendo el primer objeto del array "padre"
     for (const cartoon of cartoons) { 
         if(cartoon.debut < peliVieja.debut){
             peliVieja = cartoon;
