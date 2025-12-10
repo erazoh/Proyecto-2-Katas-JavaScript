@@ -13,18 +13,21 @@ const inputText = document.querySelector('[data-function="toFilterStreamers"]');
 inputText.value = "";
 console.log(inputText)
 
+//Creamos el evento input que recoje los valores en tiempo de lo que se escribe
 inputText.addEventListener("input", () => {
-    const minuscula = inputText.value.toLowerCase();
 
-   const streamersFiltrados = streamers.filter(streamer => {
+    //ponemos en miscula para comparar con el array Streamers si esta lo que buscamos
+    const minuscula = inputText.value.toLowerCase();
+    const streamersFiltrados = streamers.filter(streamer => {
         if (minuscula !== "") {
+            // imprime el valor del input
             console.log(minuscula)
-            return streamer.name.toLowerCase().includes(minuscula);
+            return streamer.name.toLowerCase().includes(minuscula); //si esta incluido return streamer
             
         }
-        return false;
+        return false; //si no esta return false
     });
-
+    //imprimimos los nombres del array que extrajimos
     streamersFiltrados.forEach(element => {
          console.log(`\t${element.name}`);
     });

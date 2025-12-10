@@ -14,7 +14,7 @@ body = document.body;
 
 // haremos un titulo
 let title = document.createElement("h2");
-title.textContent = "Álbumes";
+title.textContent = "Álbumes".toUpperCase();
 body.appendChild(title);
 
 //crearemos una lista

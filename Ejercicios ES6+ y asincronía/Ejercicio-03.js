@@ -25,7 +25,6 @@ const newUsers1 = users1.map(user => {
         user.name = "Anacleto";
         return user.name
     }else{
-        user.name
         return user.name
     }
 })

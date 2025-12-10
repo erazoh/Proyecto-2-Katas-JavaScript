@@ -34,6 +34,7 @@ const newColors = [...colors.slice(0,2),...colors.slice(3)]
 
 console.log(newColors);
 
-    // const newColors2 = [...colors]
+    // const newColors2 = [...colors] //*otra forma de hacerlo
     // newColors2.splice(2,1);
+    // console.log(newColors2);
     // console.log(newColors2);

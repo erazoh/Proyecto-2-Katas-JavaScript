@@ -13,9 +13,11 @@ const videogames = [
 ]
 //Array de objetos de genero RPG
 const juegosRPG = videogames.filter(juego => {
+    //si encuentras el elemento que coincida con RPG y no es indefinda devuelve el juego
     if(juego.genders.find(element => element == 'RPG') !== undefined){
         return juego
     }
+    //rotarno falso y no lo guarda
     return false
 })
 console.log(juegosRPG)
